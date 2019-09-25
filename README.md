@@ -3,62 +3,77 @@
 Python packaging recently got awesome!
 
 **pyproject.toml** is the standard place to configure everything,
-defined in [PEP 518](https://www.python.org/dev/peps/pep-0518),
-so each tool has a little ✓ or ✗ to indicate support.
+defined in [PEP 518](https://www.python.org/dev/peps/pep-0518).
+Because lack of `pyproject.toml` support in some tools
+is the only part about Python packaging that isn’t awesome already,
+each tool has a little ✅ or ❌ to indicate support.
 
 ## Testing / Checking
 
+Make sure your program behaves as you intended in different environments.
+
 - [tox](https://tox.readthedocs.io/)
-  [✅ (ini syntax in string)](https://tox.readthedocs.io/en/latest/example/basic.html#pyproject-toml-tox-legacy-ini)
+  [✅ (pyproject.toml, setup.cfg, tox.ini)](https://tox.readthedocs.io/en/latest/example/basic.html#pyproject-toml-tox-legacy-ini)
 
   Use this to define environments in which to test your package.
   Like continuous integration on your local machine.
   Can be integrated into CI like GH Actions, AppVeyor or Travis.
 
 - [pytest](https://pytest.org/)
-  [❌](https://github.com/pytest-dev/pytest/issues/1556)
+  [❌ (setup.cfg, tox.ini, pytest.ini)](https://github.com/pytest-dev/pytest/issues/1556)
 
   Unofficial standard for Python testing.
   Many Plugins, user-friendly error reporting using just `assert`.
   Good defaults make lack of `pyproject.toml` support painless.
 
 - [mypy](http://mypy-lang.org/)
-  [❌](https://github.com/python/mypy/issues/5205)
+  [❌ (setup.cfg, mypy.ini)](https://github.com/python/mypy/issues/5205)
 
   Static type checking. Very strict:
   If you satisfy it, you probably have no bugs anymore 😉
 
 ## Code Style
 
-- [pylint](https://www.pylint.org/)
-  [❌](https://github.com/PyCQA/pylint/issues/617)
+Make sure feedback in PRs isn’t mostly about code style, but about actual content.
 
-  A generic style checker for many possible code smells.
+- [pylint](https://www.pylint.org/)
+  [❌ (pylintrc, .pylintrc)](https://github.com/PyCQA/pylint/issues/617),
+  [flake8](http://flake8.pycqa.org/)
+  [❌ (setup.cfg, tox.ini, .flake8)](https://gitlab.com/pycqa/flake8/issues/428)
+
+  Generic style checkers for many possible code smells.
+
+- [pycodestyle](http://pycodestyle.pycqa.org/)
+  [❌ (setup.cfg, tox.ini)](https://github.com/PyCQA/pycodestyle/issues/813)
+
+  A style checker focused on [PEP 8](https://www.python.org/dev/peps/pep-0008/) compliance.
+  Is included in `flake8`.
 
 - [black](https://black.readthedocs.io/)
-  [✅](https://black.readthedocs.io/en/stable/pyproject_toml.html)
+  [✅ (pyproject.toml)](https://black.readthedocs.io/en/stable/pyproject_toml.html)
 
   A optionless code formatter that frees your mind from having to think about style.
 
 - [isort](https://pypi.org/project/isort/)
-  [✅](https://github.com/timothycrosley/isort#configuring-isort)
+  [✅ (pyproject.toml, setup.cfg, tox.ini, .isort.cfg)](https://github.com/timothycrosley/isort#configuring-isort)
 
   A formatter for reordering imports. Many options!
 
 ## Package Creation Tools
 
-With poetry and flit, there’s two easy to use command line applications.
+Manage your package’s dependencies, and publish it to the PyPI.
+With `poetry` and `flit`, there’s two easy to use command line applications.
 No `pip`, `twine`, and `./setup.py` juggling!
 
 - [poetry](https://poetry.eustace.io/)
-  [✅](https://github.com/sdispater/poetry#the-pyprojecttoml-file)
+  [✅ (pyproject.toml)](https://github.com/sdispater/poetry#the-pyprojecttoml-file)
   
   A tool for application and library development that manages dependencies.
   Keeps an unchanging project environment via lockfile and
   other than pip has an actual dependency solver.
   
 - [flit](https://flit.readthedocs.io/)
-  [✅](https://flit.readthedocs.io/en/latest/pyproject_toml.html)
+  [✅ (pyproject.toml, flit.ini)](https://flit.readthedocs.io/en/latest/pyproject_toml.html)
 
   A tool for simple packages without compilation step.
   Use e.g. [get_version](https://github.com/flying-sheep/get_version)
@@ -76,7 +91,7 @@ These don’t need to be configured per project with `pyproject.toml`,
 but need to read its `[build-system]` section to install the project!
 
 - [pip](https://pip.pypa.io/)
-  [✅](https://pip.pypa.io/en/stable/reference/pip/#pep-517-and-518-support)
+  [✅ (pyproject.toml, setup.py)](https://pip.pypa.io/en/stable/reference/pip/#pep-517-and-518-support)
 
   Python’s classic package manager. Widespread like no other and therefore very robust.
   Except for actually [resolving dependencies](https://github.com/pypa/pip/issues/988),
@@ -84,7 +99,7 @@ but need to read its `[build-system]` section to install the project!
 
 - `poetry` (and to a small degree `flit`) is a package manager itself.
 - [pipenv](https://docs.pipenv.org/)
-  ❌ (Uses `Pipfile`)
+  ❌ (Pipfile)
   
   `pipenv` is not a package creation tool, it’s an application creation tool.
   If you want to build a library, choose `poetry` or `flit`.
@@ -92,6 +107,6 @@ but need to read its `[build-system]` section to install the project!
 ## Others
 
 - [dephell](https://github.com/dephell/dephell#readme)
-  [✅](https://github.com/dephell/dephell#usage)
+  [✅ (pyproject.toml)](https://github.com/dephell/dephell#usage)
 
   A dependency management tool that converts between and allows reasoning about all above.
