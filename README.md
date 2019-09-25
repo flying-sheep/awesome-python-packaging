@@ -29,7 +29,7 @@ each tool has a little ✅ or ❎ to indicate support.
 
   Static type checking. Very strict:
   If you satisfy it, you probably have no bugs anymore 😉
-https://github.com/timothycrosley/isort#configuring-isort
+
 ## Code Style
 
 - [pylint](https://www.pylint.org/)
