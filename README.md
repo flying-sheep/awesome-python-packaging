@@ -82,7 +82,7 @@ but need to read its `[build-system]` section to install the project!
   Except for actually [resolving dependencies](https://github.com/pypa/pip/issues/988),
   which it does rather duct-tape-and-hope like.
 
-- `poetry` and `pipenv` are package managers themselves and to a small degree `flit`, too.
+- `poetry` (and to a small degree `flit`) is a package manager itself.
 - [pipenv](https://docs.pipenv.org/)
   ❎ (Uses `Pipfile`)
   
