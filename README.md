@@ -6,7 +6,7 @@ Python packaging recently got awesome!
 defined in [PEP 518](https://www.python.org/dev/peps/pep-0518).
 Because lack of `pyproject.toml` support in some tools
 is the only part about Python packaging that isn’t awesome already,
-each tool has a little ✅ or ❎ to indicate support.
+each tool has a little ✅ or ❌ to indicate support.
 
 ## Testing / Checking
 
@@ -20,14 +20,14 @@ Make sure your program behaves as you intended in different environments.
   Can be integrated into CI like GH Actions, AppVeyor or Travis.
 
 - [pytest](https://pytest.org/)
-  [❎ (setup.cfg, tox.ini, pytest.ini)](https://github.com/pytest-dev/pytest/issues/1556)
+  [❌ (setup.cfg, tox.ini, pytest.ini)](https://github.com/pytest-dev/pytest/issues/1556)
 
   Unofficial standard for Python testing.
   Many Plugins, user-friendly error reporting using just `assert`.
   Good defaults make lack of `pyproject.toml` support painless.
 
 - [mypy](http://mypy-lang.org/)
-  [❎ (setup.cfg, mypy.ini)](https://github.com/python/mypy/issues/5205)
+  [❌ (setup.cfg, mypy.ini)](https://github.com/python/mypy/issues/5205)
 
   Static type checking. Very strict:
   If you satisfy it, you probably have no bugs anymore 😉
@@ -37,14 +37,14 @@ Make sure your program behaves as you intended in different environments.
 Make sure feedback in PRs isn’t mostly about code style, but about actual content.
 
 - [pylint](https://www.pylint.org/)
-  [❎ (pylintrc, .pylintrc)](https://github.com/PyCQA/pylint/issues/617),
+  [❌ (pylintrc, .pylintrc)](https://github.com/PyCQA/pylint/issues/617),
   [flake8](http://flake8.pycqa.org/)
-  [❎ (setup.cfg, tox.ini, .flake8)](https://gitlab.com/pycqa/flake8/issues/428)
+  [❌ (setup.cfg, tox.ini, .flake8)](https://gitlab.com/pycqa/flake8/issues/428)
 
   Generic style checkers for many possible code smells.
 
 - [pycodestyle](http://pycodestyle.pycqa.org/)
-  [❎ (setup.cfg, tox.ini)](https://github.com/PyCQA/pycodestyle/issues/813)
+  [❌ (setup.cfg, tox.ini)](https://github.com/PyCQA/pycodestyle/issues/813)
 
   A style checker focused on [PEP 8](https://www.python.org/dev/peps/pep-0008/) compliance.
   Is included in `flake8`.
@@ -99,7 +99,7 @@ but need to read its `[build-system]` section to install the project!
 
 - `poetry` (and to a small degree `flit`) is a package manager itself.
 - [pipenv](https://docs.pipenv.org/)
-  ❎ (Pipfile)
+  ❌ (Pipfile)
   
   `pipenv` is not a package creation tool, it’s an application creation tool.
   If you want to build a library, choose `poetry` or `flit`.
