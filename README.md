@@ -16,14 +16,14 @@ so each tool has a little ✓ or ✗ to indicate support.
   Can be integrated into CI like GH Actions, AppVeyor or Travis.
 
 - [pytest](https://pytest.org/)
-  [❎](https://github.com/pytest-dev/pytest/issues/1556)
+  [❌](https://github.com/pytest-dev/pytest/issues/1556)
 
   Unofficial standard for Python testing.
   Many Plugins, user-friendly error reporting using just `assert`.
   Good defaults make lack of `pyproject.toml` support painless.
 
 - [mypy](http://mypy-lang.org/)
-  [❎](https://github.com/python/mypy/issues/5205)
+  [❌](https://github.com/python/mypy/issues/5205)
 
   Static type checking. Very strict:
   If you satisfy it, you probably have no bugs anymore 😉
@@ -31,7 +31,7 @@ so each tool has a little ✓ or ✗ to indicate support.
 ## Code Style
 
 - [pylint](https://www.pylint.org/)
-  [❎](https://github.com/PyCQA/pylint/issues/617)
+  [❌](https://github.com/PyCQA/pylint/issues/617)
 
   A generic style checker for many possible code smells.
 
@@ -84,7 +84,7 @@ but need to read its `[build-system]` section to install the project!
 
 - `poetry` (and to a small degree `flit`) is a package manager itself.
 - [pipenv](https://docs.pipenv.org/)
-  ❎ (Uses `Pipfile`)
+  ❌ (Uses `Pipfile`)
   
   `pipenv` is not a package creation tool, it’s an application creation tool.
   If you want to build a library, choose `poetry` or `flit`.
