@@ -10,6 +10,8 @@ each tool has a little ✅ or ❎ to indicate support.
 
 ## Testing / Checking
 
+Make sure your program behaves as you intended in different environments.
+
 - [tox](https://tox.readthedocs.io/)
   [✅ (pyproject.toml, setup.cfg, tox.ini)](https://tox.readthedocs.io/en/latest/example/basic.html#pyproject-toml-tox-legacy-ini)
 
@@ -31,6 +33,8 @@ each tool has a little ✅ or ❎ to indicate support.
   If you satisfy it, you probably have no bugs anymore 😉
 
 ## Code Style
+
+Make sure feedback in PRs isn’t mostly about code style, but about actual content.
 
 - [pylint](https://www.pylint.org/)
   [❎ (pylintrc, .pylintrc)](https://github.com/PyCQA/pylint/issues/617),
@@ -57,7 +61,8 @@ each tool has a little ✅ or ❎ to indicate support.
 
 ## Package Creation Tools
 
-With poetry and flit, there’s two easy to use command line applications.
+Manage your package’s dependencies, and publish it to the PyPI.
+With `poetry` and `flit`, there’s two easy to use command line applications.
 No `pip`, `twine`, and `./setup.py` juggling!
 
 - [poetry](https://poetry.eustace.io/)
