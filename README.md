@@ -3,8 +3,10 @@
 Python packaging recently got awesome!
 
 **pyproject.toml** is the standard place to configure everything,
-defined in [PEP 518](https://www.python.org/dev/peps/pep-0518),
-so each tool has a little ✓ or ✗ to indicate support.
+defined in [PEP 518](https://www.python.org/dev/peps/pep-0518).
+Because lack of `pyproject.toml` support in some tools
+is the only part about Python packaging that isn’t awesome already,
+each tool has a little ✅ or ❎ to indicate support.
 
 ## Testing / Checking
 
@@ -27,7 +29,7 @@ so each tool has a little ✓ or ✗ to indicate support.
 
   Static type checking. Very strict:
   If you satisfy it, you probably have no bugs anymore 😉
-
+https://github.com/timothycrosley/isort#configuring-isort
 ## Code Style
 
 - [pylint](https://www.pylint.org/)
