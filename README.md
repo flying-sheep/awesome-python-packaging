@@ -37,7 +37,7 @@ Make sure your program behaves as you intended in different environments.
 Make sure feedback in PRs isn’t mostly about code style, but about actual content.
 
 - [pylint](https://www.pylint.org/)
-  [❌ (pylintrc, .pylintrc)](https://github.com/PyCQA/pylint/issues/617),
+  [✅ (pyproject.toml, setup.cfg, pylintrc, .pylintrc)](http://pylint.pycqa.org/en/latest/user_guide/run.html#command-line-options),
   [flake8](http://flake8.pycqa.org/)
   [❌ (setup.cfg, tox.ini, .flake8)](https://gitlab.com/pycqa/flake8/issues/428)
 
