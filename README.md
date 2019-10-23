@@ -32,6 +32,11 @@ Make sure your program behaves as you intended in different environments.
   Static type checking. Very strict:
   If you satisfy it, you probably have no bugs anymore 😉
 
+- [Coverage.py](https://coverage.readthedocs.io/)
+  [❌ (.coveragerc)](https://github.com/nedbat/coveragepy/issues/664)
+
+  Code coverage measurement for Python.
+
 ## Code Style
 
 Make sure feedback in PRs isn’t mostly about code style, but about actual content.
