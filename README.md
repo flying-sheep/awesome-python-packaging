@@ -29,8 +29,8 @@ Make sure your program behaves as you intended in different environments.
 - [mypy](http://mypy-lang.org/)
   [❌ (setup.cfg, mypy.ini)](https://github.com/python/mypy/issues/5205)
 
-  Static type checking. Very strict:
-  If you satisfy it, you probably have no bugs anymore 😉
+  Static type checking. It tests if the values you pass to
+  and return from functions match the type annotations.
 
 - [Coverage.py](https://coverage.readthedocs.io/)
   [✅ (pyproject.toml, .coveragerc)](https://coverage.readthedocs.io/en/latest/config.html#configuration-reference)
