@@ -33,7 +33,7 @@ Make sure your program behaves as you intended in different environments.
   If you satisfy it, you probably have no bugs anymore 😉
 
 - [Coverage.py](https://coverage.readthedocs.io/)
-  [❌ (.coveragerc)](https://github.com/nedbat/coveragepy/issues/664)
+  [✅ (pyproject.toml, .coveragerc)](https://coverage.readthedocs.io/en/latest/config.html#configuration-reference)
 
   Code coverage measurement for Python.
 
