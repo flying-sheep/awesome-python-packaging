@@ -84,11 +84,17 @@ No `pip`, `twine`, and `./setup.py` juggling!
   Use e.g. [get_version](https://github.com/flying-sheep/get_version)
   if you think your git tags are good as a source of versioning.
 
-- [twine](https://twine.readthedocs.io/), and
-  [setuptools_scm](https://pypi.org/project/setuptools-scm/)
+- [twine](https://twine.readthedocs.io/)
 
   If you’re still stuck in `setup.py` world, this might soothe your pain.
-  These ones don’t have per-project configuration to go into `pyproject.toml`.
+  It allows you to upload a `wheel` to PyPI with little hassle. It has no configuration.
+
+- [setuptools_scm](https://pypi.org/project/setuptools-scm/)
+  [✅ (pyproject.toml, setup.cfg)](https://github.com/pypa/setuptools_scm/tree/94e3b2ae60df31983a9d208f1f95a725f2639ba3#pyprojecttoml-usage)
+
+  A package that allows you to have one true source of versions: Your SCM metadata (e.g. `git tag`).
+  Installing a “dirty” untagged version will automatically give you a version string that comparse as newer than the last clean one.
+  It can work at build time as a command line tool/Python API or as a runtime library.
 
 ## Package managers
 
