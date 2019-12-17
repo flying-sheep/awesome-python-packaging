@@ -42,7 +42,8 @@ Make sure your program behaves as you intended in different environments.
 Make sure feedback in PRs isn’t mostly about code style, but about actual content.
 
 - [pylint](https://www.pylint.org/)
-  [✅ (pyproject.toml, setup.cfg, pylintrc, .pylintrc)](http://pylint.pycqa.org/en/latest/user_guide/run.html#command-line-options),
+  [✅ (pyproject.toml, setup.cfg, pylintrc, .pylintrc)](http://pylint.pycqa.org/en/latest/user_guide/run.html#command-line-options)
+  – upcoming in v2.5,  
   [flake8](http://flake8.pycqa.org/)
   [❌ (setup.cfg, tox.ini, .flake8)](https://gitlab.com/pycqa/flake8/issues/428)
 
@@ -91,6 +92,8 @@ No `pip`, `twine`, and `./setup.py` juggling!
 
 - [setuptools_scm](https://pypi.org/project/setuptools-scm/)
   [✅ (pyproject.toml, setup.cfg)](https://github.com/pypa/setuptools_scm/tree/94e3b2ae60df31983a9d208f1f95a725f2639ba3#pyprojecttoml-usage)
+  – upcoming in v3.4
+  
 
   A package that allows you to have one true source of versions: Your SCM metadata (e.g. `git tag`).
   Installing a “dirty” untagged version will automatically give you a version string that comparse as newer than the last clean one.
