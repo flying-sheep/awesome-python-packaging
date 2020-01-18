@@ -91,8 +91,7 @@ No `pip`, `twine`, and `./setup.py` juggling!
   It allows you to upload a `wheel` to PyPI with little hassle. It has no configuration.
 
 - [setuptools_scm](https://pypi.org/project/setuptools-scm/)
-  [✅ (pyproject.toml, setup.cfg)](https://github.com/pypa/setuptools_scm/tree/94e3b2ae60df31983a9d208f1f95a725f2639ba3#pyprojecttoml-usage)
-  – upcoming in v3.4
+  [✅ (pyproject.toml, setup.cfg)](https://github.com/pypa/setuptools_scm#pyprojecttoml-usage)
   
 
   A package that allows you to have one true source of versions: Your SCM metadata (e.g. `git tag`).
