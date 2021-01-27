@@ -20,7 +20,7 @@ Make sure your program behaves as you intended in different environments.
   Can be integrated into CI like GH Actions, AppVeyor or Travis.
 
 - [pytest](https://pytest.org/)
-  [❌ (setup.cfg, tox.ini, pytest.ini)](https://github.com/pytest-dev/pytest/issues/1556)
+  [✅ (pyproject.toml, setup.cfg, tox.ini, pytest.ini)](https://docs.pytest.org/en/stable/customize.html#pyproject-toml)
 
   Unofficial standard for Python testing.
   Many Plugins, user-friendly error reporting using just `assert`.
