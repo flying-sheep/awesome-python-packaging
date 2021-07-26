@@ -27,7 +27,8 @@ Make sure your program behaves as you intended in different environments.
   Good defaults make lack of `pyproject.toml` support painless.
 
 - [mypy](http://mypy-lang.org/)
-  [❌ (setup.cfg, mypy.ini)](https://github.com/python/mypy/issues/5205)
+  [✅ (pyproject.toml, setup.cfg, mypy.ini)](https://mypy.readthedocs.io/en/stable/config_file.html#using-a-pyproject-toml-file)
+  – [since version 0.900](https://mypy-lang.blogspot.com/2021/06/mypy-0900-released.html)
 
   Static type checking. It tests if the values you pass to
   and return from functions match the type annotations.
@@ -43,7 +44,7 @@ Make sure feedback in PRs isn’t mostly about code style, but about actual cont
 
 - [pylint](https://www.pylint.org/)
   [✅ (pyproject.toml, setup.cfg, pylintrc, .pylintrc)](http://pylint.pycqa.org/en/latest/user_guide/run.html#command-line-options)
-  – upcoming in v2.5,  
+  – since version 2.5,  
   [flake8](http://flake8.pycqa.org/)
   [❌ (setup.cfg, tox.ini, .flake8)](https://gitlab.com/pycqa/flake8/issues/428)
 
