@@ -11,13 +11,21 @@ each tool has a little ✅ or ❌ to indicate support.
 ## Testing / Checking
 
 Make sure your program behaves as you intended in different environments.
+Apart from locally running these, you also want to set up Continuous Integration (CI) like GitHub Actions or AppVeyor.
+
+- [pre-commit](https://pre-commit.com/)
+  [❌ (.pre-commit-config.yaml)](https://github.com/pre-commit/pre-commit/issues/1165)
+
+  Automatically run checks (as e.g. the ones below) and formatters when committing changes.
+  You probably want to configure this to run all checks except for slow ones like unit tests.
+  Has its own CI provider that runs very quickly.
 
 - [tox](https://tox.readthedocs.io/)
   [✅ (pyproject.toml, setup.cfg, tox.ini)](https://tox.readthedocs.io/en/latest/example/basic.html#pyproject-toml-tox-legacy-ini)
 
   Use this to define environments in which to test your package.
   Like continuous integration on your local machine.
-  Can be integrated into CI like GH Actions, AppVeyor or Travis.
+  Can be integrated into CI.
 
 - [pytest](https://pytest.org/)
   [✅ (pyproject.toml, setup.cfg, tox.ini, pytest.ini)](https://docs.pytest.org/en/stable/customize.html#pyproject-toml)
