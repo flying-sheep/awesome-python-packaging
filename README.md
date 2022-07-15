@@ -69,35 +69,55 @@ Make sure feedback in PRs isn’t mostly about code style, but about actual cont
 ## Package Creation Tools
 
 Manage your package’s dependencies, and publish it to the PyPI.
-With `poetry` and `flit`, there’s two easy to use command line applications.
-No `pip`, `twine`, and `./setup.py` juggling!
-
-- [poetry](https://poetry.eustace.io/)
-  [✅ (pyproject.toml)](https://github.com/sdispater/poetry#the-pyprojecttoml-file)
-  
-  A tool for application and library development that manages dependencies.
-  Keeps an unchanging project environment via lockfile and
-  other than pip has an actual dependency solver.
+All of the below tools come with a Command Line Interface (CLI) and a
+[build backend](https://peps.python.org/pep-0517/).
+Except for flit, all of the CLIs allow you to manage package environments for your package’s dependencies.
   
 - [flit](https://flit.readthedocs.io/)
   [✅ (pyproject.toml, flit.ini)](https://flit.readthedocs.io/en/latest/pyproject_toml.html)
 
   A tool for simple packages without compilation step.
-  Use e.g. [get_version](https://github.com/flying-sheep/get_version)
-  if you think your git tags are good as a source of versioning.
+  Does not manage package environments, which makes it very obvious and unsurprising.
+
+- [PDM](https://pdm.fming.dev/latest/)
+  [✅ (pyproject.toml)](https://pdm.fming.dev/latest/pyproject/pep621/)
+  
+  Has advanced features entirely based on standards.
+  if you e.g. want to use its environment management with `hatch`’s build plugins, do it.
+  The only not yet standardized function: Allows to synchronize your package dependencies using a lockfile.
+
+- [poetry](https://poetry.eustace.io/)
+  [✅ (pyproject.toml)](https://github.com/sdispater/poetry#the-pyprojecttoml-file)
+  
+  Also has lockfile support, but does more things not following standards.
+  As a result, it contributes/uses the ecosystem less,
+  is less interoperable, but well-tread paths work very well.
+  
+- [hatch](https://hatch.pypa.io/latest/)
+  [✅ (pyproject.toml, hatch.toml)](https://hatch.pypa.io/latest/config/metadata/)
+
+  (Optionally) allows a more fine grained and manual environment management than the above, similarly to `tox`.
+  Has plugins, e.g. [hatch-vcs](https://pypi.org/project/hatch-vcs/) which derives your package version from Git tags.
+
+Tools you can rely on that are not project managers / build backends:
+
+- [build](https://pypa-build.readthedocs.io/en/stable/)
+
+  Allows you to call into any of the build backends above and use it to build a `wheel` file for your package.
+  It has no configuration.
 
 - [twine](https://twine.readthedocs.io/)
 
-  If you’re still stuck in `setup.py` world, this might soothe your pain.
-  It allows you to upload a `wheel` to PyPI with little hassle. It has no configuration.
+  Allows you to upload a built `wheel` to PyPI with little hassle.
+  It has no configuration.
 
 - [setuptools_scm](https://pypi.org/project/setuptools-scm/)
   [✅ (pyproject.toml, setup.cfg)](https://github.com/pypa/setuptools_scm#pyprojecttoml-usage)
   
-
   A package that allows you to have one true source of versions: Your SCM metadata (e.g. `git tag`).
   Installing a “dirty” untagged version will automatically give you a version string that comparse as newer than the last clean one.
   It can work at build time as a command line tool/Python API or as a runtime library.
+  `hatch-vcs` wraps its functionality.
 
 ## Package managers
 
@@ -111,12 +131,12 @@ but need to read its `[build-system]` section to install the project!
   Except for actually [resolving dependencies](https://github.com/pypa/pip/issues/988),
   which it does rather duct-tape-and-hope like.
 
-- `poetry` (and to a small degree `flit`) is a package manager itself.
+- The Package Creation Tools above can be used as package managers.
 - [pipenv](https://docs.pipenv.org/)
   ❌ (Pipfile)
   
   `pipenv` is not a package creation tool, it’s an application creation tool.
-  If you want to build a library, choose `poetry` or `flit`.
+  If you want to build a library, choose one of the package creation tools above.
 
 ## Others
 
