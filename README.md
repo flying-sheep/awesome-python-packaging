@@ -140,7 +140,7 @@ but need to read its `[build-system]` section to install the project!
   which it does rather duct-tape-and-hope like.
 
 - The Package Creation Tools above can be used as package managers.
-- [pipenv](https://docs.pipenv.org/)
+- [pipenv](https://pipenv.pypa.io/en/latest/)
   ❌ (Pipfile)
   
   `pipenv` is not a package creation tool, it’s an application creation tool.
