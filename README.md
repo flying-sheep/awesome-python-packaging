@@ -54,7 +54,7 @@ Make sure feedback in PRs isn’t mostly about code style, but about actual cont
   [✅ (pyproject.toml, setup.cfg, pylintrc, .pylintrc)](http://pylint.pycqa.org/en/latest/user_guide/run.html#command-line-options)
   – since version 2.5,  
   [flake8](http://flake8.pycqa.org/)
-  [❌ (setup.cfg, tox.ini, .flake8)](https://gitlab.com/pycqa/flake8/issues/428)
+  [❌ (setup.cfg, tox.ini, .flake8)](https://github.com/PyCQA/flake8/issues/234)
 
   Generic style checkers for many possible code smells.
 
