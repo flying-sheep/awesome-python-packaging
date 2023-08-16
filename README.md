@@ -70,7 +70,7 @@ Make sure feedback in PRs isn’t mostly about code style, but about actual cont
   A optionless code formatter that frees your mind from having to think about style.
 
 - [isort](https://pypi.org/project/isort/)
-  [✅ (pyproject.toml, setup.cfg, tox.ini, .isort.cfg)](https://github.com/timothycrosley/isort#configuring-isort)
+  [✅ (pyproject.toml, setup.cfg, tox.ini, .isort.cfg)](https://pycqa.github.io/isort/docs/configuration/config_files.html#pyprojecttoml-preferred-format)
 
   A formatter for reordering imports. Many options!
 
